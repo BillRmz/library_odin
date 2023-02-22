@@ -1,3 +1,14 @@
+const bookTitle = document.querySelector('#title');
+const bookAuthor = document.querySelector('#author');
+const noPages = document.querySelector('#pages');
+const status = document.querySelector('#status')
+
+const btnAdd = document.querySelector('.btn')
+
+
+btnAdd.addEventListener('click', addBookToLibrary)
+
+
 let myLibrary = [];
 
 function Book(title, author, noPages, read) {
@@ -12,19 +23,22 @@ Book.prototype.bookInfo = function(){
     return `${this.title} by ${this.author}, ${this.noPages}, is ${this.read}.`
 }
 
-function addBookToLibrary(title, author, noPages, read) {
-  const book = new Book(title, author, noPages, read)
+function addBookToLibrary(e) {
+  e.preventDefault();
+  const book = new Book(bookTitle.value, bookAuthor.value, noPages.value, status.value)
   myLibrary.push(book)
+  bookTitle.value = '';
+  bookAuthor.value = ''; 
+  noPages.value = '' ;
+  status.value = '' ;
+
+
+
+
 }
 
 
-addBookToLibrary('Harry Potter Deathly Hallows', 'J.K Rowlling',607, 'Read')
-addBookToLibrary('Isla de los Hombres Solos', 'Jose Leon Sanchez',250, 'Read')
 
-console.log(myLibrary)
 
-for(i in myLibrary){
-    console.log(myLibrary[i].title,myLibrary[i].author )
-  
-    
-}
+
+
