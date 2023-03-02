@@ -14,7 +14,7 @@
 
 .main-content{
     display: grid;
-    grid-template-columns: 2fr 5fr;
+    grid-template-columns: 1fr 4fr;
     height: 110vh;
 }
 
@@ -43,3 +43,43 @@
 .select-form option{
     font-size: 15px;
    }
+
+.book-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem; 
+}
+
+.books{
+    margin: 1rem;
+    width: 80%;
+}
+
+.header{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+  
+   .GeneratedTable {
+     width: 100%;
+     background-color: #ffffff;
+     border-collapse: collapse;
+     border-width: 2px;
+     border-color: #000000;
+     border-style: solid;
+     color: #000000;
+   }
+   
+   .GeneratedTable td, .GeneratedTable th {
+     border-width: 2px;
+     border-color: #000000;
+     border-style: solid;
+     padding: 3px;
+   }
+   
+   .GeneratedTable thead {
+     background-color: #92e8b0;
+   }
+  

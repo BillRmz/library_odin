@@ -1,7 +1,8 @@
+
 const bookTitle = document.querySelector('#title');
 const bookAuthor = document.querySelector('#author');
 const noPages = document.querySelector('#pages');
-const status = document.querySelector('#status')
+const state = document.querySelector('#status')
 
 const btnAdd = document.querySelector('.btn')
 
@@ -25,18 +26,33 @@ Book.prototype.bookInfo = function(){
 
 function addBookToLibrary(e) {
   e.preventDefault();
-  const book = new Book(bookTitle.value, bookAuthor.value, noPages.value, status.value)
+  const book = new Book(bookTitle.value, bookAuthor.value, noPages.value, state.value)
   myLibrary.push(book)
   bookTitle.value = '';
   bookAuthor.value = ''; 
   noPages.value = '' ;
-  status.value = '' ;
-
-
-
-
+  state.value = '' ;
 }
 
+
+function showBooks(){
+  const bookList = document.querySelector('#book-list')
+
+  for(let i=0; i<myLibrary.length; i++){
+   const bookRow = document.createElement('tr');
+
+   //book title
+   const bookTitle = document.createElement('td')
+   bookTitle.textContent = myLibrary[i].title;
+    bookRow.appendChild(bookTitle);
+
+   
+   
+   
+    console.log(myLibrary[i].title,myLibrary[i].author,myLibrary[i].read)
+}
+
+}
 
 
 
