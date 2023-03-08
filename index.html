@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/0977d37484.js" crossorigin="anonymous"></script>
     <title>Library</title>
 </head>
 <body>
@@ -32,7 +33,7 @@
               <div class="status-input">
                 <label for="status">Status</label>
                 <select class='select-form' name="status" id="status">
-                    <option value="read">Read</option>
+                    <option value="read"selected >Read</option>
                     <option value="not-read">Not Read</option>
                 </select>
               </div>
@@ -50,8 +51,7 @@
     <div class="book-view border">
       <div class="header">
         <h1> Library</h1>
-
-      </div>
+     </div>
 
       <div class="books" >
         <table class="GeneratedTable">
@@ -61,16 +61,16 @@
               <th>Author</th>
               <th>No Pages</th>
               <th>Status</th>
-              <th>Delete?</th>
+              <th><i class="fa-solid fa-trash"></i></th>
             </tr>
           </thead>
           <tbody id="book-list" >
             <tr>
-              <td>Cell</td>
-              <td>Cell</td>
-              <td>Cell</td>
-              <td>Cell</td>
-              <td>Cell</td>
+              <td>--</td>
+              <td>--</td>
+              <td>--</td>
+              <td>--</td>
+              <td class="del">--</td>
             </tr>
           </tbody>
         </table>
