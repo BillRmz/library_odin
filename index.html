@@ -1,77 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/0977d37484.js" crossorigin="anonymous"></script>
-    <title>Library</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/0977d37484.js" crossorigin="anonymous"></script>
+  <title>Library</title>
 </head>
+
 <body>
- <main class="main-content border">
+  <main class="main-content border">
     <div class="selection-panel border">
-        <form action="" class="input-form">
-          <h4>Please Provide Book Info.</h4>
-            <div class="title-input">
-                
-                <input type="text" name="title" id="title" placeholder="Book Title" />
-              </div>
+      <form action="" class="input-form">
+        <h4>Please Provide Book Info.</h4>
+        <div class="title-input">
+        <input type="text" name="title" id="title" placeholder="Book Title" />
+        </div>
 
-              <div class="author-input">
-                
-                <input type="text" name="author" id="author" placeholder="Book Author" />
-              </div>
+        <div class="author-input">
+          <input type="text" name="author" id="author" placeholder="Book Author" />
+        </div>
 
-              <div class="no-pages">
-                
-                <input type="number" name="pages" id="pages" placeholder="Number of Pages" />
-              </div>
+        <div class="no-pages">
+          <input type="number" name="pages" id="pages" placeholder="Number of Pages" />
+        </div>
 
 
-              
+        <div class="status-input box">
+          <select class='select-form' name="status" id="status">
+            <option value="read" selected>Read</option>
+            <option value="not-read">Not Read</option>
+          </select>
+        </div>
 
-              <div class="status-input box">
-                
-                <select class='select-form' name="status" id="status">
-                    <option value="read"selected >Read</option>
-                    <option value="not-read">Not Read</option>
-                </select>
-              </div>
-              
-              <div class="btn">
-                <button type="submit">Add Book!</button>
-            </div>
-
-             
-          
-        </form>
-
-
+        <div class="btn">
+          <button type="submit">Add Book!</button>
+        </div>
+      </form>
     </div>
 
     <div class="book-view border">
       <div class="header">
         <h1>Virtual Library 📚</h1>
-     </div>
-
-     <div class="stats-container">
-      <div class="total-books">
-        <h4>Total of Books:</h4>
-        <p class="total">0</p>
-    </div>
-      <div class="read-books">
-        <h4>Total Read:</h4>
-        <p class="total-read">0</p>
-    </div>
-      <div class="not-read-books">
-        <h4>Total Unread:</h4>
-        <p class="total-unread">0</p>
-
       </div>
-    </div>
 
-      <div class="books" >
+      <div class="stats-container">
+        <div class="total-books">
+          <h4>Total of Books:</h4>
+          <p class="total"> </p>
+        </div>
+        <div class="read-books">
+          <h4>Total Read:</h4>
+          <p class="total-read"> </p>
+        </div>
+        <div class="not-read-books">
+          <h4>Total Unread:</h4>
+          <p class="total-unread"> </p>
+
+        </div>
+      </div>
+
+      <div class="books">
         <table class="GeneratedTable">
           <thead>
             <tr>
@@ -82,7 +73,7 @@
               <th><i class="fa-solid fa-trash"></i></th>
             </tr>
           </thead>
-          <tbody id="book-list" >
+          <tbody id="book-list">
             <tr>
               <td>--</td>
               <td>--</td>
@@ -97,8 +88,9 @@
     </div>
 
 
- </main>
-    
-<script src="script.js"></script>
+  </main>
+
+  <script src="script.js"></script>
 </body>
+
 </html>

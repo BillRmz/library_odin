@@ -5,29 +5,29 @@
     font-family: 'Roboto', sans-serif;
 }
 
-body{
-background-image: url(img/bkg.jpg);
-background-position: center;
-background-repeat: no-repeat;
+body {
+    background-image: url(img/bkg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 
 
-.main-content{
+.main-content {
     display: grid;
     grid-template-columns: 1fr 4fr;
     height: 110vh;
 }
 
 
-.selection-panel{
+.selection-panel {
     display: flex;
     flex-direction: column;
     justify-content: baseline;
     align-items: center;
 }
 
-.input-form{
+.input-form {
     margin-left: 1rem;
     margin-right: 1rem;
     margin-top: 5rem;
@@ -39,13 +39,13 @@ background-repeat: no-repeat;
     font-size: 25px;
     padding: 1rem;
     background: rgba(240, 251, 190, 0.14);
-border-radius: 16px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(9.4px);
--webkit-backdrop-filter: blur(9.4px);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.4px);
+    -webkit-backdrop-filter: blur(9.4px);
 }
 
-.input-form input{
+.input-form input {
     background: transparent;
     color: aliceblue;
     font-size: 20px;
@@ -54,36 +54,36 @@ backdrop-filter: blur(9.4px);
     border: #d8b0b0 solid 0.5px;
 }
 
-.input-form input:focus{
+.input-form input:focus {
     outline: none;
     border: #ce7272 solid 1.5px;
-   }
+}
 
-.select-form option{
+.select-form option {
     font-size: 15px;
     margin: 1px;
     padding: 2px;
-   }
+}
 
 .book-view {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem; 
+    gap: 1rem;
 }
 
-.books{
-    margin: 1   rem;
+.books {
+    margin: 1 rem;
     width: 80%;
     background: rgba(240, 251, 190, 0.14);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(9.4px);
     -webkit-backdrop-filter: blur(9.4px);
-    border: none    ;
+    border: none;
 }
 
-.header{
+.header {
     margin-top: 1rem;
     margin-bottom: 1rem;
     width: 100%;
@@ -91,74 +91,73 @@ backdrop-filter: blur(9.4px);
     padding: 8px;
 }
 
-  
-   .GeneratedTable {
-     width: 100%;
-     background:transparent;
-     /* border-collapse: collapse;
+
+.GeneratedTable {
+    width: 100%;
+    background: transparent;
+    /* border-collapse: collapse;
      border-width: 2px;
      border-color: #000000;
      border-style: solid; */
-     color: #000000;
-     font-size: 25px;
-    
-    }
-   .GeneratedTable th{
+    color: #000000;
+    font-size: 25px;
+
+}
+
+.GeneratedTable th {
     border-bottom: solid 2px black;
-   }
-   
-   .GeneratedTable td {
+}
+
+.GeneratedTable td {
     border-bottom: #000000 dotted 1px;
-     padding: 5px;
-     text-align: center;
+    padding: 5px;
+    text-align: center;
 
-   }
-   
-   .GeneratedTable thead {
+}
+
+.GeneratedTable thead {
     margin-bottom: 2px;
-   }
+}
 
 
-   
 
-.del{
+
+.del {
     width: 15px;
     font-size: 20px;
     color: rgb(240, 6, 6);
     font-weight: bold;
 }
 
-td .fa-trash{
-color: rgb(240, 6, 6);
-cursor: pointer;
+td .fa-trash {
+    color: rgb(240, 6, 6);
+    cursor: pointer;
 }
 
-td .fa-trash:hover{
+td .fa-trash:hover {
     color: rgb(247, 247, 247);
 }
 
 
-/* .fa-trash{
-    pointer-events: none;
-} */
 
 .fa-x {
-color: red;
+    color: red;
 }
 
 
-.fa-check{
+.fa-check {
     color: green;
 }
 
-.fa-check, .fa-x{
+.fa-check,
+.fa-x {
     font-size: 40px;
     font-weight: bold;
 }
 
-  
-  .box select {
-    background:transparent;
+
+.box select {
+    background: transparent;
     color: rgb(231, 231, 231);
     padding: 5px;
     width: 150px;
@@ -169,93 +168,101 @@ color: red;
     -webkit-appearance: button;
     appearance: button;
     outline: none;
-  }
-  
- 
-  
-  .select-form option {
+}
+
+
+
+.select-form option {
     padding: 30px;
-    background:rgb(104, 96, 85);
+    background: rgb(104, 96, 85);
     margin-bottom: 1rem;
-  }
+}
 
 
-  .books{
+.books {
     border: none;
     padding: 1rem;
-  }
+}
 
-  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: rgb(255, 255, 255);
-    opacity: 1; /* Firefox */
-  }
+    opacity: 1;
+    /* Firefox */
+}
 
-button{
-   width: 150px;
-   font-size: 15px;
-   border-radius: 25px;
-   padding: 5px;
-   font-weight: bold;
-   cursor: pointer;
-   background-color: transparent;
-   color: #ffffff;
-   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
-   border: none;
-   margin-top: 1rem;
+button {
+    width: 150px;
+    font-size: 15px;
+    border-radius: 25px;
+    padding: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: transparent;
+    color: #ffffff;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+    border: none;
+    margin-top: 1rem;
 
 
 }
 
-button:hover{
+button:hover {
     background-color: transparent;
     color: black;
     font-weight: bold;
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.4);
-    
+
 }
 
-.stats-container{
+.stats-container {
     display: flex;
     flex-direction: row;
-    gap: 1rem; 
+    gap: 1rem;
     padding: 10px;
     width: 80%;
     justify-content: flex-end;
 }
 
-.total-books ,.read-books, .not-read-books{
+.total-books,
+.read-books,
+.not-read-books {
     display: flex;
     flex-direction: row;
     gap: 5px;
 }
 
 
-.total-books p{
+.total-books p {
     color: blue;
     font-weight: bold;
 
-} .read-books p{
-color: green;
-font-weight: bold;
+}
 
-} .not-read-books p {
-color: red;
-font-weight: bold;
+.read-books p {
+    color: green;
+    font-weight: bold;
 
 }
 
-h4{
+.not-read-books p {
+    color: red;
+    font-weight: bold;
+
+}
+
+h4 {
     font-size: 20px;
     color: antiquewhite;
     font-weight: 500;
 }
-   
-p{
+
+p {
     font-size: 20px;
 
 
 }
 
-.header h1{
+.header h1 {
     color: antiquewhite;
 }
