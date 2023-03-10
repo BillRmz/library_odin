@@ -1,16 +1,16 @@
 
+//selectors 
 const bookTitle = document.querySelector('#title');
 const bookAuthor = document.querySelector('#author');
 const noPages = document.querySelector('#pages');
 const state = document.querySelector('#status')
-
 const btnAdd = document.querySelector('.btn')
 const table = document.querySelector('#book-list')
+
 
 //event listeners 
 btnAdd.addEventListener('click', addBookToLibrary)
 table.addEventListener('click', deleteCheck)
-
 
 
 let myLibrary = [];
@@ -36,16 +36,19 @@ function addBookToLibrary(e) {
   bookAuthor.value = ''; 
   noPages.value = '' ;
   state.value = '' ;
-  showBooks();
+  showBooks(); 
+  totalBooks()
 }
 
 let count = 0
 function showBooks(){
-   const bookList = document.querySelector('#book-list') 
-   bookList.textContent = '';
-  for(let i=0; i<myLibrary.length; i++){
+const bookList = document.querySelector('#book-list') 
+bookList.textContent = '';
+  
+ for(let i=0; i<myLibrary.length; i++){
   const bookRow = document.createElement('tr'); 
   bookList.appendChild(bookRow)
+
   //book title
    const bookTitle = document.createElement('td')
    bookTitle.textContent = myLibrary[i].title;
@@ -58,7 +61,6 @@ function showBooks(){
   bookRow.appendChild(author);
 
   //Pages 
-
   const pages = document.createElement('td');
   pages.textContent = myLibrary[i].noPages
   bookRow.appendChild(pages)
@@ -70,7 +72,7 @@ function showBooks(){
    status.innerHTML = '<i class="fa-solid fa-x"> </i>'
    
   } 
-  else if(myLibrary[i].read ==='read'){
+  else if(myLibrary[i].read === 'read'){
   status.innerHTML = '<i class="fa-solid fa-check"> </i>'
   
   }
@@ -82,9 +84,10 @@ function showBooks(){
   count = count+1
   btnDel.innerHTML = '<i class="fa-solid fa-trash"></i>'
   btnDel.classList.add('del')
-  bookRow.appendChild(btnDel)   
+  bookRow.appendChild(btnDel)  
+  
 }
-
+totalBooks()
 }
 
 
@@ -113,25 +116,40 @@ function showBooks(){
 
 
 
-function deleteCheck(){
-
-document.addEventListener('click', (event) => {
-  const { target } = event;
-  item = target
-  const tr = target.parentNode.parentNode.rowIndex - 1;
-  console.log(target.classList)
-  if (target.classList[1] === 'fa-check'){
+function deleteCheck(e){
+  const item = e.target;
+  let i = item.parentNode.parentNode.rowIndex - 1
+  if(item.classList[1]=== 'fa-check'){
     item.classList = 'fa-solid fa-x'
-  }
-  else if (target.classList[1] === 'fa-x'){
+    myLibrary[i].read = 'not-read'
+  } else if(item.classList[1] === 'fa-x'){
     item.classList = 'fa-solid fa-check'
-  }
-  else if (target.classList[1] === 'del'){
-    myLibrary.splice(tr, 1);
+    myLibrary[i].read = 'read'
+  }else if(myLibrary[1] === 'fa-trash'){
+    myLibrary.splice(i,1) 
   }
   showBooks()
+  
+}
 
-})
-
+function totalBooks(){
+  
+  const totalBooks = document.querySelector('.total')
+  const totalRead = document.querySelector('.total-read') 
+  const totalUnread = document.querySelector('.total-unread')
+  let countRead = 0;
+  let countUnread = 0;
+  totalBooks.textContent  = myLibrary.length
+  for(let i=0; i<=myLibrary.length; i++){
+    if(myLibrary[i].read === "read"){
+      countRead += 1 
+      totalRead.textContent = countRead 
+    } else if(myLibrary[i].read === "not-read"){
+      let total = (myLibrary.length - countRead)
+      countUnread += 1 
+      totalUnread.textContent = countUnread 
+    }
+  }
+    
 
 }

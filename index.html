@@ -12,33 +12,35 @@
  <main class="main-content border">
     <div class="selection-panel border">
         <form action="" class="input-form">
+          <h4>Please Provide Book Info.</h4>
             <div class="title-input">
-                <label for="title">Title</label>
+                
                 <input type="text" name="title" id="title" placeholder="Book Title" />
               </div>
 
               <div class="author-input">
-                <label for="author">Author</label>
+                
                 <input type="text" name="author" id="author" placeholder="Book Author" />
               </div>
 
               <div class="no-pages">
-                <label for="pages">Pages</label>
+                
                 <input type="number" name="pages" id="pages" placeholder="Number of Pages" />
               </div>
 
 
               
 
-              <div class="status-input">
-                <label for="status">Status</label>
+              <div class="status-input box">
+                
                 <select class='select-form' name="status" id="status">
                     <option value="read"selected >Read</option>
                     <option value="not-read">Not Read</option>
                 </select>
               </div>
+              
               <div class="btn">
-                <button type="submit">Add</button>
+                <button type="submit">Add Book!</button>
             </div>
 
              
@@ -50,8 +52,24 @@
 
     <div class="book-view border">
       <div class="header">
-        <h1> Library</h1>
+        <h1>Virtual Library 📚</h1>
      </div>
+
+     <div class="stats-container">
+      <div class="total-books">
+        <h4>Total of Books:</h4>
+        <p class="total">0</p>
+    </div>
+      <div class="read-books">
+        <h4>Total Read:</h4>
+        <p class="total-read">0</p>
+    </div>
+      <div class="not-read-books">
+        <h4>Total Unread:</h4>
+        <p class="total-unread">0</p>
+
+      </div>
+    </div>
 
       <div class="books" >
         <table class="GeneratedTable">
