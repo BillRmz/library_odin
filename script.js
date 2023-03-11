@@ -25,6 +25,7 @@ Book.prototype.bookInfo = function () {
   return `${this.title} by ${this.author}, ${this.noPages}, is ${this.read}.`;
 };
 
+//function to add books to a array myLibrary
 function addBookToLibrary(e) {
   e.preventDefault();
   let status;
@@ -48,6 +49,8 @@ function addBookToLibrary(e) {
   showBooks();
 }
 
+
+//show books in a table
 function showBooks() {
   const bookList = document.querySelector("#book-list");
   bookList.textContent = "";
@@ -89,6 +92,9 @@ function showBooks() {
   totalBooks();
 }
 
+
+//Function to change status and delete item
+
 function deleteCheck(e) {
   const item = e.target;
   let i = item.parentNode.parentNode.rowIndex - 1;
@@ -104,6 +110,7 @@ function deleteCheck(e) {
   showBooks();
 }
 
+//Calc the stats of library 
 function totalBooks() {
   const booksRead = document.querySelector(".total-read");
   const booksUnread = document.querySelector(".total-unread");
